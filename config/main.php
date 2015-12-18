@@ -5,8 +5,8 @@ return array(
     'defaultController' => 'Home',
     
     // Just put null value if you has enable .htaccess file
-    // 'indexFile' => INDEX_FILE . '/',
-    'indexFile' => '',
+    'indexFile' => INDEX_FILE . '/',
+    // 'indexFile' => '',
     
     'module' => array(
         'path' => APP,
