@@ -34,7 +34,7 @@
 									<span class="Label">Minggu ke - <?php echo $dataMateri->minggu;?></span>
 								</div>
 
-								<iframe src="<?php echo $asset;?>viewerjs/index.html?zoom=page-width#<?php echo $this->location('assets/materi/'.$dataMateri->file);?>" width="100%" height="650px" allowfullscreen webkitallowfullscreen></iframe>      
+								<iframe src="<?php echo $asset;?>viewerjs/index.html?zoom=page-width#<?php echo $this->uri->baseUri.'assets/materi/'.$dataMateri->file;?>" width="100%" height="650px" allowfullscreen webkitallowfullscreen></iframe>      
 
 								<div class="Video__details">
 									<p class="Video__meta">
