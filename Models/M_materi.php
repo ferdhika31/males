@@ -44,4 +44,18 @@ class M_materi{
     	}
 	}
 
+	public function semuaDaftarmateri(){
+		$query = $this->db->results("SELECT materi.judul, materi.tipe_materi, matkul.nama_matkul from materi INNER JOIN matkul on matkul.matkul_id=materi.matkul_id");
+
+		return $query;
+	}
+
+	public function semuaDaftarmateriPer($page = 1, $limit = 10){
+		$offset = ($limit * $page) - $limit;
+
+		$query = $this->db->results("SELECT materi.judul, materi.tipe_materi, matkul.nama_matkul from materi INNER JOIN matkul on matkul.matkul_id=materi.matkul_id limit $offset, $limit");
+
+		return $query;
+	}
+
 }

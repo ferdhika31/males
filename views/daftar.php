@@ -1,3 +1,6 @@
+<?php
+	// $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+?>
 	<body class="">
 		<div id="root" class="page">
 			<header class="Header">
@@ -63,6 +66,10 @@
 										<input name="lesson_type" type="radio">
 										<a href="">Series Episode</a>
 									</label>
+								</li>
+
+								<li class="Filterable__item">
+									<a href="/lessons" class="Button Button--Block">Saring</a>
 								</li>
 							</ul>
 						</div>

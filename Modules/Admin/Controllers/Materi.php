@@ -113,7 +113,7 @@ class Materi extends Resources\Controller{
 		// detail matkul
 		$data['matkul'] = $this->m_admin->ambilSatuMatkul($data['materi']->matkul_id);
 		// detail minggu
-		$data['minggu'] = $this->m_admin->ambilSatuMinggu($data['materi']->matkul_id);
+		$data['minggu'] = $this->m_admin->ambilSatuMinggu($data['materi']->minggu_id);
 
 		$data['heading_title'] = 'Ubah materi "'.$data['materi']->judul.'"';
 		$data['notif']	= '';
@@ -121,14 +121,14 @@ class Materi extends Resources\Controller{
 		if($this->request->post('oke')){
 			$judul = $this->request->post('judul');
 			$deskripsi = $this->request->post('deskripsi');
-			$file = $this->request->post('my_file');
+			$file = $_FILES['my_file'];
 			$tgl_materi = $this->request->post('tgl_materi');
 			$tipe = $this->request->post('tipe_materi');
 			$minggu = $this->request->post('minggu');
 
 			if(!empty($judul) || !empty($tgl_materi) || !empty($tipe) || !empty($minggu)){
 				// jika file tetap kosong
-				if(!empty($file)) {
+				if($file['name']==" "){
 					$namaFile = 'Minggu ke '.$data['minggu']->minggu.' '.$judul;
 					$fileName = str_replace(" ", "_", $namaFile);
 
@@ -157,10 +157,14 @@ class Materi extends Resources\Controller{
 					$ubah = true;
 					$nama_file = $data['materi']->file;
 				}
-
+				
 				if($ubah==true){
-					if($tgl_materi==$data['materi']->tgl_materi){
-						$tgl_mat = $data['materi']->tgl_materi;
+					$tgl = substr($data['materi']->tgl_materi,0,10);
+					$pecah = explode('-', $tgl);
+					$tanggal = $pecah[2].'/'.$pecah[1].'/'.$pecah[0];
+
+					if($tgl_materi == $tanggal){
+						$tgl_mat = substr($data['materi']->tgl_materi,0,10);
 					}else{
 						//Split tanggal materi
 						$pecah = explode("/", $tgl_materi);
