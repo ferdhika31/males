@@ -6,9 +6,9 @@
                         </h1>	
 						<ul class="Navigation__links">
 
-							<li class="Navigation__link">
+							<!--<li class="Navigation__link">
                                 <a href="<?php echo $this->location('daftar');?>"><span>Daftar Materi</span></a>
-                            </li>
+                            </li>-->
 
                             <!-- <li class="Navigation__link">
                                 <div class="Dropdown">
