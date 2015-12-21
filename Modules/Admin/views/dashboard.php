@@ -8,8 +8,11 @@
 			<!-- start: Content -->
 			<div id="content" class="span10">
 			
-						
 			<div class="row-fluid">
+				Selamat datang <?php echo $this->session->getValue('nama');?>. 
+			</div>
+						
+			<!-- <div class="row-fluid">
 				
 				<div class="span3 smallstat box mobileHalf" ontablet="span6" ondesktop="span3">
 					<div class="boxchart-overlay blue">
@@ -123,7 +126,7 @@
 							</ul>
 						</div>	
 					</div>
-				</div>
+				</div> -->
 		
 			</div>
 		

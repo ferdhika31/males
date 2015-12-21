@@ -96,7 +96,7 @@
 							<a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
 								<div class="avatar"><img src="<?php echo $this->uri->baseUri;?>/assets/img/fav.png" alt="Avatar" /></div>
 								<div class="user">
-									<span class="hello">Welcome!</span>
+									<!-- <span class="hello">Welcome!</span> -->
 									<span class="name"><?php echo $this->session->getValue('nama');?></span>
 								</div>
 							</a>

@@ -64,11 +64,36 @@
 									</div>
 
 									<div class="control-group">
+										<label class="control-label" for="matkul">Mata Kuliah</label>
+										<div class="controls">
+											<select name="matkul">
+												<?php
+												if(!empty($matkuls)):
+													foreach ($matkuls as $matkul):
+														$smt = isset($materi->matkul_id) ? $materi->matkul_id : '';
+														$pilih = ($matkul->matkul_id==$smt) ? ' selected': '';
+												?>
+												<option<?php echo $pilih;?> value="<?php echo $matkul->matkul_id;?>">
+													<?php echo $matkul->nama_matkul;?>
+												</option>
+												<?php
+													endforeach;
+												else:
+												?>
+												<option>-None-</option>
+												<?php
+												endif;
+												?>
+											</select>
+										</div>
+									</div>
+
+									<div class="control-group">
 										<label class="control-label" for="tipe_materi">Tipe Materi</label>
 										<div class="controls">
 											<select name="tipe_materi">
-												<option value="praktek"<?php echo ($materi->tipe_materi=="praktek") ? " selected" : ""; ?>>Praktek</option>
-												<option value="teori"<?php echo ($materi->tipe_materi=="teori") ? " selected" : ""; ?>>Teori</option>
+												<option value="praktek"<?php echo (!empty($materi)) ? ($materi->tipe_materi=="praktek") ? " selected" : "" : ""; ?>>Praktek</option>
+												<option value="teori"<?php echo (!empty($materi)) ? ($materi->tipe_materi=="teori") ? " selected" : "" : ""; ?>>Teori</option>
 											</select>
 										</div>
 									</div>

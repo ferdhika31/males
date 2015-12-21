@@ -42,6 +42,7 @@ class Login extends Resources\Controller{
 				if(!empty($mimin)){
 					$dataSession = array(
 						'isAdmin' => true,
+						'user_id'	=> $mimin->user_id,
 						'username'	=> $mimin->username,
 						'nama'		=> $mimin->nama,
 						'email'		=> $mimin->email,

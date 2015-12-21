@@ -1,6 +1,6 @@
 <footer>
 			<p>
-				<span style="text-align:left;float:left">&copy; 2015 <a href="http://dika.web.id" alt="Bootstrap Themes">Ferdhika Yudira</a></span>
+				<span style="text-align:left;float:left">&copy; 2015 <a href="http://dika.web.id" target="_blank" alt="Bootstrap Themes">Ferdhika Yudira</a></span>
 				<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://admintemplates.co" alt="Bootstrap Admin Templates">SimpliQ</a></span>
 			</p>
 
