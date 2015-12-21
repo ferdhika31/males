@@ -10,9 +10,9 @@
                         <h3>Kumpulan materi materi perkuliahan <br><strong>Informatika D4 Teknik Informatika Politeknik Negeri Bandung</strong>.
                         <!-- <br>Dokumen pdf dari minggu pertama. --></h3>
 
-                        <a href="<?php echo $this->location('daftar');?>" class="Button Button--Callout">
+                        <!--<a href="<?php echo $this->location('daftar');?>" class="Button Button--Callout">
                             Mulai mencari
-                        </a>
+                        </a>-->
                     </div>
                 </div>
             </header>
